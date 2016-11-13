@@ -19,12 +19,13 @@ Example:
   
   let htmlString = @
     <p>Good news everyone!</p>
+  console.log(htmlString); // => "<p>Good news everyone!</p>"
   
   let page = 'Main';
-  let jadeString = jade(@@ // with placeholders
+  let jadeTemplate = jade(@@ // with js placeholders
     html
       head
-        title {$page}
+        title ${page}
       body
         h1 Page
         p Hi block text
